@@ -1,11 +1,11 @@
-class AdminsController < ApplicationController
-  def admin
+class AdminController < ApplicationController
+  def index
     @admins = Admin.all
     render :admin
   end
   def new
     @admin = Admin.new
-    render :admin
+    render :new
   end
   def create
     @admin = Admin.new(admin_params)
