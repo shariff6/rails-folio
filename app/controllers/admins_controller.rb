@@ -1,7 +1,7 @@
-class AdminController < ApplicationController
+class AdminsController < ApplicationController
   def index
     @admins = Admin.all
-    render :admin
+    render :index
   end
   def new
     @admin = Admin.new
@@ -10,14 +10,16 @@ class AdminController < ApplicationController
   def create
     @admin = Admin.new(admin_params)
       if @admin.save
-        redirect_to admin_path
+        redirect_to admins_path
       else
         render :new
       end
   end
 
 private
+
    def admin_params
      params.require(:admin).permit(:name, :title)
    end
+
 end

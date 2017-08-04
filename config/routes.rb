@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
- resources :admin do
+ resources :admins do
    resources :projects
  end
- resources :admin do
+ resources :admins do
    resources :skills
  end
 end
