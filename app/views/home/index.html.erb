@@ -1,9 +1,23 @@
-<h1>Projects</h1>
+<div class="wrapper">
+  <div class="main">
+    <div class="header">
+      <h1>Mohammed Shariff</h1>
+      <h2>Full Stack Web Developer</h2>
+      <div class="btns">
+      </div>
+    </div>
 
-  <ul>
-    <% @projects.each do |project| %>
-      <li><%= project.title%></li>
-    <% end %>
-  </ul>
-
- <%= link_to "New Project", new_project_path %>
+    <div class="page-container">
+      <div class="sidemenu">
+        <nav class="left">
+          <h2 style="font-size:35px;">My Projects</h2>
+        </nav>
+        <nav class="right">
+          <a href="/fb">Safiri</a>
+          <a href="/dbfd">Smart Farm</a>
+          <a href="dfvd">School Systems</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
