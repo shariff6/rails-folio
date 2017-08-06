@@ -16,9 +16,9 @@
 ! function($) {
 
   var defaults = {
-    flyDirection: "bottom",
-    button: "Menu",
-    animationStyle: "vertical",
+    flyDirection: "top",
+    button: "Projects",
+    animationStyle: "diagonal",
     closeButton: "X"
   };
 

@@ -13,9 +13,9 @@
           <h2 style="font-size:35px;">My Projects</h2>
         </nav>
         <nav class="right">
-          <a href="/fb">Safiri</a>
-          <a href="/dbfd">Smart Farm</a>
-          <a href="dfvd">School Systems</a>
+          <% @projects.each do |project| %>
+          <a href="<%=project.link%>"><%=project.title%></a>
+          <% end %>
         </nav>
       </div>
     </div>
