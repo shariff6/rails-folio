@@ -1,0 +1,7 @@
+<%= form_for [@admin, @skill] do |f| %>
+  <%= f.label :skill %>
+  <%= f.text_field :skill %>
+  <%= f.label :mastery %>
+  <%= f.text_field :mastery %>
+  <p><%= f.submit %></p>
+<% end %>
