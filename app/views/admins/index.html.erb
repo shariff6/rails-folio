@@ -1,9 +1,0 @@
-<h1>Admin</h1>
-
-  <ul>
-    <% @admins.each do |admin| %>
-      <li><%= link_to admin.name, admin_path(admin) %></li>
-    <% end %>
-  </ul>
-
- <%= link_to "New Admin", new_admin_path %>
