@@ -1,0 +1,12 @@
+<p><%= link_to "Add a Project", new_admin_project_path(@admin) %></p>
+<ul>
+  <% @admin.projects.each do |project| %>
+    <li>
+      <%= project.title %>
+      <%= link_to "Delete", admin_project_path(@admin, project),
+                               :data => {:confirm => "Are you sure?",
+                                              :method => "delete"} %>
+    </li>
+  <% end %>
+</ul>
+<% else %>
