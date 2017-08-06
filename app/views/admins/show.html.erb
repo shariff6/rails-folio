@@ -1,9 +1,24 @@
 <p><%= link_to "Add a Project", new_admin_project_path(@admin) %></p>
+<p><%= link_to "Add a Skill", new_admin_skill_path(@admin) %></p>
+
+<h2>Projects</h2>
 <ul>
   <% @admin.projects.each do |project| %>
     <li>
       <%= project.title %>
       <%= link_to "Delete", admin_project_path(@admin, project),
+                               :data => {:confirm => "Are you sure?",
+                                              :method => "delete"} %>
+    </li>
+  <% end %>
+</ul>
+
+<h1>Skills</h1>
+<ul>
+  <% @admin.skills.each do |skill| %>
+    <li>
+      <%= skill.skill %>
+      <%= link_to "Delete", admin_skill_path(@admin, skill),
                                :data => {:confirm => "Are you sure?",
                                               :method => "delete"} %>
     </li>
