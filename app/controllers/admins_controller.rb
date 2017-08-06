@@ -15,6 +15,10 @@ class AdminsController < ApplicationController
         render :new
       end
   end
+  def show
+   @admin = Admin.find(1)
+   render :show
+  end
 
 private
 
