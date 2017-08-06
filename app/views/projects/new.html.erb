@@ -1,0 +1,9 @@
+<%= form_for [@admin, @project] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :technology %>
+  <%= f.text_field :technology %>
+  <%= f.label :link %>
+  <%= f.text_field :link %>
+  <p><%= f.submit %></p>
+<% end %>
