@@ -20,6 +20,10 @@ class ProjectsController < ApplicationController
   @project.destroy
   redirect_to projects_path
 end
+def show
+  @project = Project.find(params[:id])
+  render :show
+end
 
 private
   def project_params
