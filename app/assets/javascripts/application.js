@@ -26,9 +26,15 @@
     $(".sidemenu").square_menu();
     $("#projects").click(function() {
       event.preventDefault();
-      $(window).scrollTop($('.page2').offset(100).top);
+     $('html,body').animate({ scrollTop: 1000 }, 'slow');
     });
   })
+  $(document).ready(function(){
+    $("#projects").click(function(){
+            event.preventDefault();
+        $(".body").animate({top: '250px'});
+    });
+});
   $.fn.square_menu = function(options) {
     var settings = $.extend({}, defaults, options),
       el = $(this);

@@ -1,3 +1,5 @@
+@import "bootstrap";
+@import 'rails_bootstrap_forms';
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -12,6 +14,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require rails_bootstrap_forms
  */
 
 body.sm-activate {
@@ -584,8 +587,6 @@ body .sm-button:hover {
   height: 90px
 }
 .projects{
-  height: 200px;
-  background-color: red;
 }
 .opaque-navbar {
     background-color: rgba(0,0,0,0.5);
@@ -613,4 +614,11 @@ ul.dropdown-menu {
     transition: background-color .5s ease 0s;
 }
 
+}
+.newProject {
+  padding: 20%
+}
+.projectImage{
+  border-width: 1px;
+  border-style: solid;
 }
