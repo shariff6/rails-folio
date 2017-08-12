@@ -17,15 +17,19 @@
 
   var defaults = {
     flyDirection: "top",
-    button: "Projects",
+    button: "Hire Me",
     animationStyle: "diagonal",
     closeButton: "X"
   };
 
   $(document).ready(function() {
     $(".sidemenu").square_menu();
+    $("#projects").click(function() {
+      event.preventDefault();
+      $(window).scrollTop($('.page2').offset(100).top);
+    });
   })
-$.fn.square_menu = function(options) {
+  $.fn.square_menu = function(options) {
     var settings = $.extend({}, defaults, options),
       el = $(this);
 
