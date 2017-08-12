@@ -1,23 +1,29 @@
-<div class="wrapper">
-  <div class="main">
-    <div class="header">
-      <h1>Mohammed Shariff</h1>
-      <h2>Full Stack Web Developer</h2>
-      <div class="btns">
+<div class="page1">
+  <div class="wrapper">
+    <div class="main">
+      <div class="header">
+        <h1>Mohammed Shariff</h1>
+        <h2>Full Stack Web Developer</h2>
+        <div class="btns"></div>
       </div>
-    </div>
 
-    <div class="page-container">
-      <div class="sidemenu">
-        <nav class="left">
-          <h2 style="font-size:35px;">My Projects</h2>
-        </nav>
-        <nav class="right">
-          <% @projects.each do |project| %>
-          <a href="<%=project.link%>"><%=project.title%></a>
-          <% end %>
-        </nav>
+      <div class="page-container">
+        <div class="sidemenu">
+          <nav class="left">
+            <h2 style="font-size:35px;">My Contacts</h2>
+          </nav>
+          <nav class="right">
+            <h3>Email</h3>
+                <p>shariff.mohammed.a@gmail.com</p>
+              </h3>
+              <h3>Phone</h3>
+              <p>+254712345678</p>
+            </nav>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <div class="page2">
+    <div class="row projects"></div>
+  </div>
