@@ -21,13 +21,14 @@ class ProjectsController < ApplicationController
   redirect_to projects_path
 end
 def show
+  @projects = Project.all
   @project = Project.find(params[:id])
   render :show
 end
 
 private
   def project_params
-    params.require(:project).permit(:title, :technology, :link)
+    params.require(:project).permit(:title, :technology, :link, :description, :image)
   end
 
   end
