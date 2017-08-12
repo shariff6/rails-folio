@@ -1,29 +1,81 @@
-<div class="page1">
-  <div class="wrapper">
-    <div class="main">
-      <div class="header">
-        <h1>Mohammed Shariff</h1>
-        <h2>Full Stack Web Developer</h2>
-        <div class="btns"></div>
-      </div>
+<div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
+        <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
 
-      <div class="page-container">
-        <div class="sidemenu">
-          <nav class="left">
-            <h2 style="font-size:35px;">My Contacts</h2>
-          </nav>
-          <nav class="right">
-            <h3>Email</h3>
-                <p>shariff.mohammed.a@gmail.com</p>
-              </h3>
-              <h3>Phone</h3>
-              <p>+254712345678</p>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="nav navbar-nav pull-right">
+        <li>
+          <a href="#" id="projects">Projects</a>
+        </li>
+        <li>
+          <a href="#"></a>
+        </li>
+        <li>
+          <a href="#"></a>
+        </li>
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="page1">
+  <div class="container-fluid">
+    <div class="wrapper">
+      <div class="main">
+        <div class="header">
+          <h1>Mohammed Shariff</h1>
+          <h2>Full Stack Web Developer</h2>
+          <div class="btns"></div>
+        </div>
+
+        <div class="page-container">
+          <div class="sidemenu">
+            <nav class="left">
+              <h2 style="font-size:35px;">My Contacts</h2>
             </nav>
-          </div>
+            <nav class="right">
+              <h3>Email</h3>
+              <p>shariff.mohammed.a@gmail.com</p>
+            </h3>
+            <h3>Phone</h3>
+            <p>+254712345678</p>
+          </nav>
         </div>
       </div>
     </div>
   </div>
-  <div class="page2">
-    <div class="row projects"></div>
+</div>
+</div>
+<div class="page2" style="height:500px">
+<div class="container-fluid">
+  <div class="row projects">
+    <hr>
+    <% @projects.each do |project| %>
+    <div class="row">
+      <h2 style="font-size:30px"><%= project.title %>s</h2>
+      <div class="col-md-4">
+        <h2>Apllication Image</h2>
+        <img class="projectImage" src="<%= project.image %>" alt="" style="height:300px;">
+      </div>
+      <div class="col-md-4">
+        <h2>Application description</h2>
+        <p><%= project.description %></p>
+        <h2>Try it Out</h2>
+        <a href="<%= project.link %>"><%= project.title %></a>
+      </div>
+      <div class="col-md-3">
+        <h2>Technologies Used</h2>
+        <%= project.technology %>
+      </div>
+    </div>
+    <hr>
+    <%end%>
   </div>
+</div>
+</div>
