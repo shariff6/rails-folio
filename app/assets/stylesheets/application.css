@@ -589,7 +589,7 @@ body .sm-button:hover {
 .opaque-navbar {
     background-color: rgba(0,0,0,0.5);
   /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
-    height: 40px;
+    height: 10px;
     border-bottom: 0px;
     transition: background-color .5s ease 0s;
 }
@@ -608,7 +608,7 @@ ul.dropdown-menu {
 @media (max-width: 992px) {
   .opaque-navbar {
     background-color: black;
-    height: 40px;
+    height: 20px;
     transition: background-color .5s ease 0s;
 }
 
@@ -618,5 +618,4 @@ ul.dropdown-menu {
 }
 .projectImage{
   border-width: 1px;
-  border-style: solid;
 }

@@ -32,8 +32,17 @@
   $(document).ready(function(){
     $("#projects").click(function(){
             event.preventDefault();
-        $(".body").animate({top: '250px'});
+        $(".body").animate({top: '450px'});
     });
+});
+
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 50)  /*height in pixels when the navbar becomes non opaque*/
+    {
+        $('.opaque-navbar').addClass('opaque');
+    } else {
+        $('.opaque-navbar').removeClass('opaque');
+    }
 });
   $.fn.square_menu = function(options) {
     var settings = $.extend({}, defaults, options),
