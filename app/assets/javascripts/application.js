@@ -26,7 +26,7 @@
     $(".sidemenu").square_menu();
     $("#projects").click(function() {
       event.preventDefault();
-     $('html,body').animate({ scrollTop: 1000 }, 'slow');
+     $('html,body').animate({ scrollTop: 1500 }, 'slow');
     });
   })
   $(document).ready(function(){
