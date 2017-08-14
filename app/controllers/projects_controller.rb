@@ -1,7 +1,12 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @projects = Project.all
-    render :index
+    if user_signed_in?
+          @projects = Project.all
+      render :index
+    else
+      redirect_to new_user_session_path
+    end
   end
     def new
       @project = Project.new
