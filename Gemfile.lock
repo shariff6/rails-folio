@@ -206,7 +206,7 @@ DEPENDENCIES
   bootstrap_forms
   byebug
   coffee-rails (~> 4.2)
-  devise (~> 4.3)
+  devise
   jbuilder (~> 2.5)
   jquery-ui-rails
   launchy
