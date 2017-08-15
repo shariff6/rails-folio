@@ -1,0 +1,9 @@
+<h2>Add a new Blog</h2>
+
+<%= form_for @blog do |f| %>
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+   <%= f.label :blog %>
+   <%= f.text_area :blog %>
+   <%= f.submit  %>
+ <% end %>
