@@ -27,5 +27,14 @@ module Portfolio
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    ActionMailer::Base.smtp_settings = {
+
+  :address =>'smtp.mailgun.org',
+  :domain => 'sandbox064d6cbffb3a4ef5aea9f7f689718bbb.mailgun.org',
+  :port => 587,
+  :user_name => 'postmaster@sandbox064d6cbffb3a4ef5aea9f7f689718bbb.mailgun.org', #ENV['GMAIL_USERNAME'],
+  :password =>'4c23ea19fad2e002a217992ceb99f27d', #ENV['MAILGUN_PASSWORD'],
+  :authentication => :plain,
+}
   end
 end
