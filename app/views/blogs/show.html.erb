@@ -1,0 +1,10 @@
+<h2><%= @blog.title %></h2>
+  <p><%= @blog.blog %></p>
+  <h2>Comments</h2>
+<div class="comments">
+  <% @blog.comments.each do |comment| %>
+  <p><%= comment.name %></p>
+  <p><%= comment.comment %></p>
+  <% end %>
+  <a href="/blogs/<%= @blog.id %>/comments/new">Add a comment</a>
+</div>
