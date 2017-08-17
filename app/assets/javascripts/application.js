@@ -11,13 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .
 ! function($) {
 
   var defaults = {
     flyDirection: "top",
-    button: "Hire Me",
+    button: "Contact Me",
     animationStyle: "diagonal",
     closeButton: "X"
   };
@@ -26,15 +27,13 @@
     $(".sidemenu").square_menu();
     $("#projects").click(function() {
       event.preventDefault();
-     $('html,body').animate({ scrollTop: 1500 }, 'slow');
+     $('html,body').animate({ scrollTop: 920 }, 'slow');
+    });
+    $("#blogs").click(function() {
+      event.preventDefault();
+     $('html,body').animate({ scrollTop: 1410 }, 'slow');
     });
   })
-  $(document).ready(function(){
-    $("#projects").click(function(){
-            event.preventDefault();
-        $(".body").animate({top: '450px'});
-    });
-});
 
   $(window).scroll(function() {
     if($(this).scrollTop() > 50)  /*height in pixels when the navbar becomes non opaque*/
@@ -44,6 +43,7 @@
         $('.opaque-navbar').removeClass('opaque');
     }
 });
+
   $.fn.square_menu = function(options) {
     var settings = $.extend({}, defaults, options),
       el = $(this);
