@@ -582,7 +582,7 @@ body .sm-button:hover {
 
 .circular-image {
   border-radius: 60%;
-  height: 90px
+  height: 90px;
 }
 .projects{
 }
@@ -596,7 +596,7 @@ body .sm-button:hover {
 
 .opaque-navbar.opaque {
     background-color: black;
-    height: 60px;
+    height: 20px;
     transition: background-color .5s ease 0s;
 }
 
