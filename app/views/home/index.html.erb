@@ -5,7 +5,11 @@
         <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
 
       </button>
-        <a class="navbar-brand" href="/projects">Admin</a>
+      <% if signed_in? && current_user.email == "shariff.mohammed.a@gmail.com" %>
+      <a class="navbar-brand" href="/projects">Admin</a>
+    <% else %>
+      <p class="navbar-brand">Mohammed Shariff</p>
+      <% end %>
     </div>
     <div class="collapse navbar-collapse" id="navMain">
       <ul class="nav navbar-nav pull-right">
@@ -13,13 +17,19 @@
           <a href="#" id="projects">Projects</a>
         </li>
         <li>
-          <a href="#"></a>
+          <a href="#" id="blogs">Blogs</a>
         </li>
         <li>
           <a href="#"></a>
         </li>
         <li>
-          <a href="#"></a>
+          <% if signed_in? %>
+
+          <%= link_to "Sign Out", destroy_user_session_path,  :method => :delete %>
+        <% else %>
+          <%= link_to "Sign In/Sign Up", new_user_session_path %>
+          <% end %>
+
         </li>
       </ul>
     </div>
@@ -53,10 +63,9 @@
   </div>
 </div>
 </div>
-<div class="page2" style="height:500px">
+<div class="page2">
 <div class="container-fluid">
   <div class="row projects">
-    <hr>
     <% @projects.each do |project| %>
     <div class="row">
       <h2 style="font-size:30px"><%= project.title %>s</h2>
@@ -78,4 +87,17 @@
     <%end%>
   </div>
 </div>
+</div>
+<div class="page3" style="height:980px">
+<div class="container-fluid">
+  <h2 style="  font-size:30px ">Blogs</h2>
+    <div class="row blogs">
+  <% @blogs.each do |blog| %>
+    <div class="col-md-6">
+      <h2><%= blog.title %></h2>
+      <p><%= blog.blog %></p>
+      <a href="/blogs/<%= blog.id %>">See More</a>
+    </div>
+    <% end %>
+  </div>
 </div>
