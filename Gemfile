@@ -7,6 +7,8 @@ end
 gem 'devise'
 gem 'bootstrap_forms'
 gem 'jquery-ui-rails'
+gem 'jquery-rails'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use postgresql as the database for Active Record
