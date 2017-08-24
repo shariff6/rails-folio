@@ -7,5 +7,5 @@
   <p><%= comment.name %></p>
   <p><%= comment.comment %></p>
   <% end %>
-  <a href="/blogs/<%= @blog.id %>/comments/new">Add a comment</a>
 </div>
+  <a href="/blogs/<%= @blog.id %>/comments/new" data-remote="true" id="newcomment">Add a comment</a>
