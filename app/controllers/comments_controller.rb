@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new, :create, :edit, :save]
 def new
   @blog = Blog.find(params[:blog_id])
   @comment = @blog.comments.new
