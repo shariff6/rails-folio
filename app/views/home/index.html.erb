@@ -4,11 +4,11 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
         <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
 
-      </button>
+      </button>\
       <% if signed_in? && current_user.email == "shariff.mohammed.a@gmail.com" %>
       <a class="navbar-brand" href="/projects">Admin</a>
     <% else %>
-      <p class="navbar-brand">Mohammed Shariff</p>
+      <p  class="navbar-brand">Mohammed Shariff</p>
       <% end %>
     </div>
     <div class="collapse navbar-collapse" id="navMain">
@@ -17,22 +17,37 @@
           <a href="#" id="projects">Projects</a>
         </li>
         <li>
-          <a href="#" id="blogs">Blogs</a>
-        </li>
-        <li>
-          <a href="#"></a>
-        </li>
-        <li>
+          <a href="#" id="blog">Blogs</a>
           <% if signed_in? %>
 
-          <%= link_to "Sign Out", destroy_user_session_path,  :method => :delete %>
+          <li><%= link_to "Sign Out", destroy_user_session_path,  :method => :delete %></li>
         <% else %>
-          <%= link_to "Sign In/Sign Up", new_user_session_path %>
-          <% end %>
-
+          <li><%= link_to "Sign In/Sign Up", new_user_session_path %>
+          <% end %></li>
         </li>
+           <li role="presentation" position="left"><a href="#menu-toggle"id="menu-toggle"><span class="glyphicon glyphicon-th-list"></span></a></li>
       </ul>
     </div>
+    <div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+REFERALS
+      </li>
+      <li class = 'referals'>
+        <% @referals.each do |referal| %>
+        <span class="glyphicon glyphicon-user" style="padding-right:350px"><%= referal.name %></span>
+        <li><%= referal.institution %></li>
+        <li><%= referal.reference %></li>
+        <% end %>
+      </li>
+      <li>  <a href="/referals/new" data-remote="true" id="newreferal">Add a Referal</a>
+      </li>
+    </ul>
+  </div>
+</div>
   </div>
 </div>
 <div class="page1">
@@ -88,17 +103,9 @@
   </div>
 </div>
 </div>
-<div class="page3" style="height:980px">
+<div class="page3">
 <div class="container-fluid">
   <h2 style="  font-size:30px ">Blogs</h2>
-    <div class="row blogs">
-  <% @blogs.each do |blog| %>
-    <div class="col-md-6">
-      <h2><%= blog.title %></h2>
-      <p><%= blog.blog %></p>
-      <a href="/blogs/<%= blog.id %>">See More</a>
-    </div>
-    <% end %>
-  </div>
+  <div id="blogs"><%= render 'blogs' %></div>
 </div>
 </div>
