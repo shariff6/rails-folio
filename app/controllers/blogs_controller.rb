@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
-before_action :authenticate_user!
-before_action :before_filter
+before_action :authenticate_user!, only: [:new, :create, :edit, :save]
+before_action :before_filter, only: [:new, :create, :edit, :save]
   def index
     @blogs = Blog.all
   end
