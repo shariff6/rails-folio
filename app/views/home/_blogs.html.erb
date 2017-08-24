@@ -1,0 +1,10 @@
+<div class="row blogs_post">
+<% @blogs.each do |blog| %>
+  <div class="col-md-6">
+    <h2><%= blog.title %></h2>
+    <p><%= truncate blog.blog, length: 500 %></p>
+    <a href="/blogs/<%= blog.id %>">See More</a>
+  </div>
+  <% end %>
+</div>
+  <%= will_paginate @blogs %>
