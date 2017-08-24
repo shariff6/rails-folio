@@ -8,11 +8,16 @@ def create
   @blog = Blog.find(params[:blog_id])
   @comment = @blog.comments.new(comment_params)
   if @comment.save
-    redirect_to blog_path(@comment.blog)
+     flash.now[:notice] = 'Message sent!'
+    respond_to do |format|
+      format.html { redirect_to blog_path(@comment.blog) }
+      format.js
+    end
   else
     render :new
   end
 end
+
 
 private
   def comment_params
