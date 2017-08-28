@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require jquery.turbolinks
 //= require turbolinks
+//= require toastr
 //= require_tree .
 
 $(document).ready(function() {
