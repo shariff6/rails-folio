@@ -36,14 +36,15 @@
       <li class="sidebar-brand">
 REFERALS
       </li>
-      <li class = 'referals'>
         <% @referals.each do |referal| %>
-        <span class="glyphicon glyphicon-user" style="padding-right:350px"><%= referal.name %></span>
+        <li><span class="glyphicon glyphicon-user" style="padding-right:350px"><%= referal.name %></span></li>
         <li><%= referal.institution %></li>
         <li><%= referal.reference %></li>
+        <div class=".referals">
+
+        </div>
         <% end %>
-      </li>
-      <li>  <a href="/referals/new" data-remote="true" id="newreferal">Add a Referal</a>
+      <li><a href="/referals/new" data-remote="true" id="newreferal">Add a Referal</a>
       </li>
     </ul>
   </div>
