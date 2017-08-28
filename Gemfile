@@ -4,9 +4,13 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+
+gem 'cancancan'
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+gem 'toastr-rails'
 gem 'devise'
 gem 'bootstrap_forms'
-gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
