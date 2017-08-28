@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  skip_before_action :authenticate_user!, :only => [:index]
   helper_method :admin_user
   def index
     @referals = Referal.all
