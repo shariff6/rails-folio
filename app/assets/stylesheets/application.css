@@ -707,7 +707,7 @@ body .sm-button:hover {
     background-color: rgba(0,0,0,0.5);
   /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
     height: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 
     transition: background-color .5s ease 0s;
 }
