@@ -324,7 +324,7 @@ body.sm-activate {
 }
 
 .sm-menu .sm-close:hover {
-  color: black;
+  color: black
 }
 
 .sm-menu .sm-nav .nav-inner>a {
@@ -370,11 +370,6 @@ body .sm-button {
   font-weight: bold;
   padding: 2px 5px;
   z-index: 102;
-}
-
-body .sm-button:hover {
-  border-bottom: 2px solid white;
-  color: white;
 }
 
 body.sm-activate .sm-overlay {
@@ -461,7 +456,7 @@ body {
   height: 100%;
 }
 .page1{
-  background-image: url('https://4.bp.blogspot.com/-77oHIvL3YuU/UydFdMamYzI/AAAAAAAArzQ/jIOo8NPliow/s0/Apple+MacBook+Air_Ultra+HD.jpg');
+  background-image: url('https://images.pexels.com/photos/18105/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -490,7 +485,7 @@ h1, h2 {
 
 h1 {
   margin-top: 100px;
-  color: #2E3B4E;
+  color: #d5dbe5;
   font-weight: 100;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -687,11 +682,11 @@ body .sm-button:hover {
 }
 
 .sm-nav:nth-child(2) {
-  background: #b5b5b5;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .sm-nav:nth-child(1) {
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .sm-menu .sm-nav:nth-child(2) .nav-inner>a {

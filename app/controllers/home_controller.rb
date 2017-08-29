@@ -15,7 +15,7 @@ class HomeController < ApplicationController
 private
 
 def admin_user
-  if current_user.email == ('shariff.mohammed.a@gmail.com')
+  if current_user.superadmin_role?
     return true
   end
 end

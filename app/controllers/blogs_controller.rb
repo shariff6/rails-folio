@@ -29,7 +29,7 @@ def blog_params
 end
 def before_filter
   if user_signed_in?
-    redirect_to root_path unless current_user.email == ('shariff.mohammed.a@gmail.com')
+    redirect_to root_path unless current_user.superadmin_role?
     else
       redirect_to new_user_session_path
   end

@@ -1,9 +1,9 @@
 
   <div class="row blogs_post">
 <% @blogs.each do |blog| %>
-  <div class="col-md-6">
+  <div class="col-md-6" style="height:100%; border-right-color:black">
     <h2><%= blog.title %></h2>
-    <p><%= truncate blog.blog, length: 500 %></p>
+    <p class="text-align:left"><%= truncate blog.blog, length: 2000 %></p>
     <a href="/blogs/<%= blog.id %>">See More</a>
   </div>
   <% end %>

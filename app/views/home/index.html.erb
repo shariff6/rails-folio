@@ -4,11 +4,11 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
         <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
 
-      </button>\
-      <% if signed_in? && current_user.email == "shariff.mohammed.a@gmail.com" %>
-      <a class="navbar-brand" href="/projects">Admin</a>
+      </button>
+      <% if signed_in?%>
+      <a class="navbar-brand" href="/admin">Dashboard</a>
     <% else %>
-      <p  class="navbar-brand">Mohammed Shariff</p>
+      <p  class="navbar-brand"></p>
       <% end %>
     </div>
     <div class="collapse navbar-collapse" id="navMain">
@@ -40,9 +40,7 @@ REFERALS
         <li><span class="glyphicon glyphicon-user" style="padding-right:350px"><%= referal.name %></span></li>
         <li><%= referal.institution %></li>
         <li><%= referal.reference %></li>
-        <div class=".referals">
-
-        </div>
+        <li id="referals"></li>
         <% end %>
       <li><a href="/referals/new" data-remote="true" id="newreferal">Add a Referal</a>
       </li>
@@ -58,20 +56,21 @@ REFERALS
         <div class="header">
           <h1>Mohammed Shariff</h1>
           <h2>Full Stack Web Developer</h2>
-          <div class="btns"></div>
+          <em><h3 style="color:#969191;">“I just invent. Then I wait until man comes around to needing what I've invented.” - Richard Buckminster Fuller</h3></em>
+          <div class="btns" style="margin-right:10px"></div>
         </div>
 
         <div class="page-container">
           <div class="sidemenu">
             <nav class="left">
-              <h2 style="font-size:35px;">My Contacts</h2>
+              <h2 style="font-size:35px; color:black;">My Contacts</h2>
             </nav>
             <nav class="right">
-              <h3>Email</h3>
-              <p>shariff.mohammed.a@gmail.com</p>
+              <h3 style="color:#ffffff;">Email</h3>
+              <p style="color:#ffffff">shariff.mohammed.a@gmail.com</p>
             </h3>
-            <h3>Phone</h3>
-            <p>+254712345678</p>
+            <h3 style="color:#ffffff;">Phone</h3>
+            <p style="color:#ffffff;">+254712345678</p>
           </nav>
         </div>
       </div>
@@ -79,7 +78,14 @@ REFERALS
   </div>
 </div>
 </div>
-<div class="page2">
+<div class="page2" style="height:50%">
+  <div class="row">
+    <h2 style="font-size:30px; text-decoration:overline">About Me</h2>
+
+    </div>
+  </div>
+</div>
+<!-- <div class="page2">
 <div class="container-fluid">
   <div class="row projects">
     <% @projects.each do |project| %>
@@ -103,10 +109,24 @@ REFERALS
     <%end%>
   </div>
 </div>
+</div> -->
+<div class="page3" style="background-color:#bcbcbc; height:90%">
+  <div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-6">
+      <div class="container-fluid">
+        <h2 style="  font-size:30px; text-decoration:overline ">Blogs</h2>
+        <div id="blogs"><%= render 'blogs' %></div>
+      </div>
+    </div>
+    <div class="col-md-3">
+
+    </div>
+
+  </div>
 </div>
-<div class="page3">
-<div class="container-fluid">
-  <h2 style="  font-size:30px ">Blogs</h2>
-  <div id="blogs"><%= render 'blogs' %></div>
-</div>
+<div class="page4" style="height:40%">
+  <h2 style="  font-size:30px; text-decoration:overline;">Referals</h2>
 </div>
