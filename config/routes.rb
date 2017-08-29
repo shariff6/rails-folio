@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :referals
-  devise_for :users, controllers: { registrations: "registrations"}
-
   root :to => 'home#index'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  resources :referals
+  devise_for :users, controllers: {
+        sessions: 'users/sessions',
+        passwords: 'users/passwords',
+        registrations: 'users/registrations'
+    }
+
 
     resources :projects
     resources :skills
