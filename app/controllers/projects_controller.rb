@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :before_filter
   skip_before_action :authenticate_user!, :only => [:index, :show]
   def index
     if user_signed_in?
@@ -36,5 +37,13 @@ end
 private
   def project_params
     params.require(:project).permit(:title, :technology, :link, :description, :image)
+  end
+
+  def before_filter
+    if user_signed_in?
+      redirect_to root_path unless current_user.email == ('shariff.mohammed.a@gmail.com')
+      else
+        redirect_to new_user_session_path
+    end
   end
 end
