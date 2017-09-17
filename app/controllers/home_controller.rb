@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     @referals = Referal.all
     @projects = Project.all
     @skills = Skill.all
-    @blogs = Blog.all.paginate(:per_page => 2, :page => params[:page])
+    @blogs = Blog.all.paginate(:per_page => 1, :page => params[:page])
     respond_to do |format|
       format.html
            format.js

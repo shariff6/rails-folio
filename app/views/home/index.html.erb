@@ -5,10 +5,13 @@
         <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
 
       </button>
-      <% if signed_in?%>
+      <% begin %>
+      <% if current_user.superadmin_role? %>
       <a class="navbar-brand" href="/admin">Dashboard</a>
     <% else %>
-      <p  class="navbar-brand"></p>
+      <p  class="navbar-brand">Mohammed Sharif</p>
+      <% end %>
+      <% rescue %>
       <% end %>
     </div>
     <div class="collapse navbar-collapse" id="navMain">
@@ -25,38 +28,20 @@
           <li><%= link_to "Sign In/Sign Up", new_user_session_path %>
           <% end %></li>
         </li>
-           <li role="presentation" position="left"><a href="#menu-toggle"id="menu-toggle"><span class="glyphicon glyphicon-th-list"></span></a></li>
       </ul>
     </div>
-    <div id="wrapper">
 
-  <!-- Sidebar -->
-  <div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-REFERALS
-      </li>
-        <% @referals.each do |referal| %>
-        <li><span class="glyphicon glyphicon-user" style="padding-right:350px"><%= referal.name %></span></li>
-        <li><%= referal.institution %></li>
-        <li><%= referal.reference %></li>
-        <li id="referals"></li>
-        <% end %>
-      <li><a href="/referals/new" data-remote="true" id="newreferal">Add a Referal</a>
-      </li>
-    </ul>
-  </div>
 </div>
   </div>
-</div>
 <div class="page1">
   <div class="container-fluid">
     <div class="wrapper">
       <div class="main">
         <div class="header">
           <h1>Mohammed Shariff</h1>
-          <h2>Full Stack Web Developer</h2>
+          <h2 style="font-size:23px">Full Stack Web Developer</h2>
           <em><h3 style="color:#969191;">“I just invent. Then I wait until man comes around to needing what I've invented.” - Richard Buckminster Fuller</h3></em>
+          <h3 style=" color:white;text-align:center">Hey, Welcome to my portfolio, I am a Ruby on Rails <br>Developer based in Nairobi, Kenya, If I'm not programming, I'm <br>thinking about it, Why Programming? It makes me a creator, it <br>makes me an inventor, it turns Imagination to Reality, Its perfect!</h3>
           <div class="btns" style="margin-right:10px"></div>
         </div>
 
@@ -78,14 +63,21 @@ REFERALS
   </div>
 </div>
 </div>
-<div class="page2" style="height:50%">
+<div class="page2">
+  <div class="container-fluid">
+    <div class="wrapper">
+      <h1>Who Am I</h1>
+    </div>
+  </div>
+</div>
+<!-- <div class="page2" style="height:50%">
   <div class="row">
     <h2 style="font-size:30px; text-decoration:overline">About Me</h2>
 
     </div>
   </div>
 </div>
-<!-- <div class="page2">
+<div class="page2">
 <div class="container-fluid">
   <div class="row projects">
     <% @projects.each do |project| %>
@@ -109,7 +101,7 @@ REFERALS
     <%end%>
   </div>
 </div>
-</div> -->
+</div>
 <div class="page3" style="background-color:#bcbcbc; height:90%">
   <div class="row">
     <div class="col-md-3">
@@ -129,4 +121,4 @@ REFERALS
 </div>
 <div class="page4" style="height:40%">
   <h2 style="  font-size:30px; text-decoration:overline;">Referals</h2>
-</div>
+</div> -->
