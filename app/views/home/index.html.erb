@@ -5,120 +5,105 @@
         <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
 
       </button>
-      <% begin %>
-      <% if current_user.superadmin_role? %>
-      <a class="navbar-brand" href="/admin">Dashboard</a>
-    <% else %>
-      <p  class="navbar-brand">Mohammed Sharif</p>
-      <% end %>
-      <% rescue %>
-      <% end %>
+      <p class="navbar-brand">Portfolio</p>
     </div>
     <div class="collapse navbar-collapse" id="navMain">
       <ul class="nav navbar-nav pull-right">
         <li>
-          <a href="#" id="projects">Projects</a>
+          <a href="#" id="projects">Skills</a>
         </li>
         <li>
-          <a href="#" id="blog">Blogs</a>
-          <% if signed_in? %>
-
-          <li><%= link_to "Sign Out", destroy_user_session_path,  :method => :delete %></li>
-        <% else %>
-          <li><%= link_to "Sign In/Sign Up", new_user_session_path %>
-          <% end %></li>
-        </li>
-      </ul>
-    </div>
+          <a href="#" id="blog">Projects</a>
+      </li>
+    </ul>
+  </div>
 
 </div>
-  </div>
+</div>
 <div class="page1">
-  <div class="container-fluid">
-    <div class="wrapper">
-      <div class="main">
-        <div class="header">
-          <h1>Mohammed Shariff</h1>
-          <h2 style="font-size:23px">Full Stack Web Developer</h2>
-          <em><h3 style="color:#969191;">“I just invent. Then I wait until man comes around to needing what I've invented.” - Richard Buckminster Fuller</h3></em>
-          <h3 style=" color:white;text-align:center">Hey, Welcome to my portfolio, I am a Ruby on Rails <br>Developer based in Nairobi, Kenya, If I'm not programming, I'm <br>thinking about it, Why Programming? It makes me a creator, it <br>makes me an inventor, it turns Imagination to Reality, Its perfect!</h3>
-          <div class="btns" style="margin-right:10px"></div>
-        </div>
-
-        <div class="page-container">
-          <div class="sidemenu">
-            <nav class="left">
-              <h2 style="font-size:35px; color:black;">My Contacts</h2>
-            </nav>
-            <nav class="right">
-              <h3 style="color:#ffffff;">Email</h3>
-              <p style="color:#ffffff">shariff.mohammed.a@gmail.com</p>
-            </h3>
-            <h3 style="color:#ffffff;">Phone</h3>
-            <p style="color:#ffffff;">+254712345678</p>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="page2">
-  <div class="container-fluid">
-    <div class="wrapper">
-      <h1>Who Am I</h1>
-    </div>
-  </div>
-</div>
-<!-- <div class="page2" style="height:50%">
-  <div class="row">
-    <h2 style="font-size:30px; text-decoration:overline">About Me</h2>
-
-    </div>
-  </div>
-</div>
-<div class="page2">
 <div class="container-fluid">
-  <div class="row projects">
-    <% @projects.each do |project| %>
-    <div class="row">
-      <h2 style="font-size:30px"><%= project.title %>s</h2>
-      <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
-        <img class="projectImage" src="<%= project.image %>" alt="" style="width:100%;">
+  <div class="wrapper">
+    <div class="main">
+      <div class="header">
+        <h1>Mohammed Shariff</h1>
+        <h2 style="font-size:23px">Full Stack Web Developer</h2>
+        <em>
+          <h3 style="color:#969191; ">“I just invent. Then I wait until man comes around to needing what I've invented.” - Richard Buckminster Fuller</h3>
+        </em>
+        <h3 style=" color:white;text-align:center; font-family: 'Indie Flower', cursive;">Hey, Welcome to my portfolio, I am a Ruby on Rails
+          <br>Developer based in Nairobi, Kenya, If I'm not programming, I'm
+          <br>thinking about it, Why Programming? It makes me a creator, it
+          <br>makes me an inventor, it turns Imagination to Reality, Its perfect!</h3>
+        <div class="btns" style="margin-right:10px"></div>
       </div>
-      <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
-        <h2>Application description</h2>
-        <p><%= project.description %></p>
-        <h2>Try it Out</h2>
-        <a href="<%= project.link %>"><%= project.title %></a>
-      </div>
-      <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
-        <h2>Technologies Used</h2>
-        <%= project.technology %>
+
+      <div class="page-container">
+        <div class="sidemenu">
+          <nav class="left">
+            <h2 style="font-size:35px; color:black;">My Contacts</h2>
+          </nav>
+          <nav class="right">
+            <h3 style="color:#ffffff;">Email</h3>
+            <p style="color:#ffffff">shariff.mohammed.a@gmail.com</p>
+          </h3>
+          <h3 style="color:#ffffff;">Phone</h3>
+          <p style="color:#ffffff;">+254712345678</p>
+        </nav>
       </div>
     </div>
-    <hr>
-    <%end%>
   </div>
 </div>
 </div>
-<div class="page3" style="background-color:#bcbcbc; height:90%">
-  <div class="row">
-    <div class="col-md-3">
+</div>
+<div class="page2" style="height:100%">
+<div class="container-fluid">
+  <div class="row" style="margin-left:30%; margin-right:30%">
+    <h3 style="text-align:center; font-family: 'Acme', sans-serif; font-size:35px; margin-left:5%;margin-top:3%; text-decoration:underline">My Skills</h3>
+    <h4 style="font-family: 'Rajdhani', sans-serif; font-size:20px; margin-left:5px;">From Moringa School I acquired a wide range of both Frontend and Backend skills. Programming is a field where one is ever learning, new skills are acquired with every
+      line of code a person writes. I have been lucky to work on projects as both a front and and back end developer. My back end skills are:
+      <br>
+      -Ruby on Rails- This is by far my favurite and one I am most proficient in, With Ruby on Rails alot can be done with less code and in shorter amounf of time, it is an efficient programming langauge
+      <br>Other languages I am expreiencced in are <br>- EmberJS and AngularJS - Both JavaScript Web Frameworks
 
+      I also have a number of front end skills, all the above mentioned languages allow you to use HTML5 as template language, using CSS/SASS together with bootstrap. I can create pretty awesome user experience.
+    <br>
+  </div>
+</div>
+<div class="row">
+<h3 style="text-align:left; font-family: 'Acme', sans-serif; font-size:35px; margin-left:5%;margin-top:3%; text-decoration:underline; text-align:center">My Work</h3>
+<div class="application">
+  <div class="row" style="margin-right:30%; margin-left:20%">
+    <div class="systems" style="margin-top:5%;margin-left:5%">
+      <img src="https://images.pexels.com/photos/207756/pexels-photo-207756.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="" height="300px" width="500px" style="float:left">
+      <p style="font-size:25px;">School Systems</p>
+      <p style="font-size:20px;font-family: 'Rajdhani', sans-serif;">School Systems is a Ruby Application that enables educational institutions to keep track of students in all aspects of the stay in the instituion be it curricular or Non-cutricular. I
+        doing this it prvides both the school and the the parents/guardiand an efficient way of keeping track of their students. Therefore bridging a major gap that is present between eduactional institutions and parents/guardians/sponsors Try out the
+        prototype from,
+        <a href="http://school-system254.herokuapp.com/admin">Here</a>
+      </p>
     </div>
-    <div class="col-md-6">
-      <div class="container-fluid">
-        <h2 style="  font-size:30px; text-decoration:overline ">Blogs</h2>
-        <div id="blogs"><%= render 'blogs' %></div>
-      </div>
-    </div>
-    <div class="col-md-3">
 
+  </div>
+  <div class="row" style="margin-right:30%; margin-left:20%;margin-top:5%">
+    <div class="farms"  style="margin-top:5%">
+      <img src="http://www.chsinc.com/~/media/chs%20inc/images/move%20to%20production/david%20images%201000x430/factories_farms/tkd%209800_1000x430.ashx?h=430&la=en&w=1000&hash=972B9364F6E199893C7800C3B1C4F8D2094D3868" alt="" height="300px" width="500px" style="float:right">
+      <p style="font-size:25px;">Smart Farm</p>
+      <p style="font-size:20px;font-family: 'Rajdhani', sans-serif;">
+      Smart Farm is an Application built on EmberJS that was created to provide a platform for those in the agricultural sector or those willing to get into the agriculturall sector to be able to get real time, accurate data in this industry from splanting seasons to planting advice this application provides information for over 100 crops in the market, Feel Free to try out the demo from <a href="https://smart-farm-1a101.firebaseapp.com/">Here</a> </p>
     </div>
 
   </div>
 </div>
-<div class="page4" style="height:40%">
-  <h2 style="  font-size:30px; text-decoration:overline;">Referals</h2>
-</div> -->
+</div>
+</div>
+<div class="footer">
+  <div id="button"></div>
+<div id="container">
+<div id="cont">
+<div class="footer_center">
+	   <h2 style="margin-top:60px;">Developed By Me</h2>
+     <p style="color:white">Copyright© 2017</p>
+</div>
+</div>
+</div>
+</div>
