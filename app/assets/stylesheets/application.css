@@ -21,6 +21,10 @@
 section{
   text-align:center;
 }
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+/* open sans font */
+@import url("//fonts.googleapis.com/css?family=Open+Sans");
 
 
 .footer #button{
@@ -424,7 +428,6 @@ body {
   background-size: cover;
   padding: 0;
   text-align: center;
-  position: relative;
   margin: 0;
   height: 100%;
   border-bottom: 12px;
@@ -442,12 +445,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
-  position: relative;
   margin: 0;
   height: 100%;
-  border-bottom: 12px;
-  border-bottom-color: white;
-  border-bottom-style: solid;
 }
 .page3{
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://wallpaperscraft.com/image/puma_cougar_mountain_lion_78654_4379x2640.jpg');
@@ -455,9 +454,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
-  position: relative;
   margin: 0;
   height: 100%;
+  border-bottom: 12px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
 }
 .wrapper {
   height: auto !important;
@@ -520,29 +521,14 @@ pre code {
 * {
   box-sizing: border-box;
 }
-.head{
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  padding: 15px 0;
-  text-align: center;
-  position: relative;
 
-  &:after, &:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: rotate(45deg);
-    background: #ccc;
-    width: 8px;
-    height: 8px;
-    border: 10px solid #fff;
-  }
-  &:before {
-    top: -15px;
-  }
-  &:after {
-    bottom: -15px;
-  }
+.head{
+  border-top: 1px;
+  border-top-color: white;
+  border-top-style: solid;
+  border-bottom: 1px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
 }
 .main {
   float: left;
@@ -823,4 +809,137 @@ ul.dropdown-menu {
     -webkit-transform:rotateY(0);
     -moz-transform:rotateY(0);
     transform:rotateY(0)
+}
+
+
+/* LTR CSS */
+#snav.en {
+  right: 0;
+  text-align: right;
+}
+#snav.en  li span {
+  left: -100px;
+}
+#snav.en li a:hover span {
+  left: 35px;
+}
+
+/* RTL CSS */
+#snav.ar {
+  left: 0;
+  text-align: left;
+}
+#snav.ar  li span {
+  left: -100px;
+}
+#snav.ar li a:hover span {
+  left: 35px;
+}
+
+/* main SideNav.css styles */
+#snav {
+  position: fixed;
+  top:20%;
+  z-index: 9999;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}
+#snav ul {
+  list-style: none;
+}
+#snav * {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#snav li a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+}
+#snav .fa {
+  vertical-align: middle;
+  font-size: 18px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+}
+#snav li span {
+  font-size: 15px;
+  vertical-align: middle;
+  height: 35px;
+  line-height: 35px;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  padding: 0 15px;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  z-index: 3;
+}
+#snav li a:hover .fa {
+  transform: rotate(720deg);
+}
+#snav li a:hover span {
+  visibility: visible;
+}
+
+/* colors styles */
+
+/* menu items title background used for browsers not supporting :nth-child */
+#snav li span {
+  background-color: #555;
+}
+/* icons color and background before hover  */
+#snav li .fa {
+  background-color: #414141;
+  color: #fff
+}
+/* icons hover color */
+#snav li a:hover .fa {
+  color: #D2527F;
+}
+/* repeated colors from 1 to 10 each hover color repeated after 10 menu items */
+#snav li:nth-child(10n+1) span, #snav li:nth-child(10n+1) a:hover .fa {
+  background-color: #8350DD;
+}
+#snav li:nth-child(10n+2) span, #snav li:nth-child(10n+2) a:hover .fa {
+  background-color: #4EC5DB;
+}
+#snav li:nth-child(10n+3) span, #snav li:nth-child(10n+3) a:hover .fa {
+  background-color: #3DC25D;
+}
+#snav li:nth-child(10n+4) span, #snav li:nth-child(10n+4) a:hover .fa {
+  background-color: #99BE24;
+}
+#snav li:nth-child(10n+5) span, #snav li:nth-child(10n+5) a:hover .fa {
+  background-color: #38c;
+}
+#snav li:nth-child(10n+6) span, #snav li:nth-child(10n+6) a:hover .fa {
+  background-color: #ff0000;
+}
+#snav li:nth-child(10n+7) span, #snav li:nth-child(10n+7) a:hover .fa {
+  background-color: #000;
+}
+#snav li:nth-child(10n+8) span, #snav li:nth-child(10n+8) a:hover .fa {
+  background-color: #F1A111;
+}
+#snav li:nth-child(10n+9) span, #snav li:nth-child(10n+9) a:hover .fa {
+  background-color: #777;
+}
+#snav li:nth-child(10n+10) span, #snav li:nth-child(10n+10) a:hover .fa {
+  background-color: #30555C;
 }
