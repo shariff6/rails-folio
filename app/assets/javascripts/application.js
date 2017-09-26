@@ -13,7 +13,6 @@
 //= require rails-ujs
 //= require jquery.turbolinks
 //= require turbolinks
-//= require toastr
 //= require_tree .
 
 $(document).ready(function() {
@@ -43,7 +42,7 @@ $(document).ready(function() {
     $("#blog").click(function() {
       event.preventDefault();
       $('html,body').animate({
-        scrollTop: 1700
+        scrollTop: 2000
       }, 'slow');
     });
     $("#menu-toggle").click(function(e) {

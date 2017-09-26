@@ -15,10 +15,14 @@
  *= require_self
  *= require toastr
  */
+
+
  @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
 section{
   text-align:center;
 }
+
+
 .footer #button{
 	width:35px;
 	height:35px;
@@ -96,128 +100,7 @@ height:100%;
 	margin-top:70px;
 	margin-left:40px;
 }
- #wrapper {
-     padding-right: 0;
-     -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-     -o-transition: all 0.5s ease;
-     transition: all 0.5s ease;
- }
 
- #wrapper.toggled {
-     padding-left: 250px;
- }
-
- #sidebar-wrapper {
-     z-index: 1000;
-     position: fixed;
-     right: 0px;
-     width: 0;
-     height: 100%;
-     margin-left: -250px;
-     overflow-y: auto;
-     background: rgba(115, 104, 104, 0.4);
-     -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-     -o-transition: all 0.5s ease;
-     transition: all 0.5s ease;
- }
-
- #wrapper.toggled #sidebar-wrapper {
-     width: 250px;
- }
-
- #page-content-wrapper {
-     width: 100%;
-     text-align: center;
-     align-items: center;
-     padding: 10px;
- }
-
- #wrapper.toggled #page-content-wrapper {
-     position: absolute;
-     margin-right: 250px;
- }
-
- /* Sidebar Styles */
-
- .sidebar-nav {
-     position: absolute;
-     top: 0;
-     width: 250px;
-     margin: 0;
-     padding: 0;
-     list-style: none;
- }
-
- .sidebar-nav li {
-     font-size: 20px;
-     text-indent: 30px;
-     line-height: 40px;
-     margin-right: -200px;
-     color: white;
- }
-
- .sidebar-nav li a {
-     display: block;
-     text-decoration: none;
-     color: white;
- }
-
- .sidebar-nav li a:hover {
-     text-decoration: none;
-     color: #fff;
-     background: rgba(255,255,255,0.2);
- }
-
- .sidebar-nav li a:active,
- .sidebar-nav li a:focus {
-     text-decoration: none;
-     color: white;
- }
-
- .sidebar-nav > .sidebar-brand {
-     height: 65px;
-     font-size: 20px;
-     line-height: 60px;
-     color: white;
- }
-
- .sidebar-nav > .sidebar-brand a {
-     color: white;
- }
-
- .sidebar-nav > .sidebar-brand a:hover {
-     color: #fff;
-     background: none;
- }
-
- @media(min-width:768px) {
-     #wrapper {
-         padding-left: 0;
-     }
-     #wrapper.toggled {
-         padding-left: 250px;
-     }
-
-     #sidebar-wrapper {
-         width: 0;
-     }
-
-     #wrapper.toggled #sidebar-wrapper {
-         width: 450px;
-     }
-
-     #page-content-wrapper {
-         padding: 20px;
-         position: relative;
-     }
-
-     #wrapper.toggled #page-content-wrapper {
-         position: relative;
-         margin-right: 0;
-     }
- }
 body.sm-activate {
   overflow: hidden;
 }
@@ -405,7 +288,7 @@ body.sm-activate {
 }
 
 .sm-menu .sm-close:hover {
-  color: black
+
 }
 
 .sm-menu .sm-nav .nav-inner>a {
@@ -417,9 +300,7 @@ body.sm-activate {
   color: white;
 }
 
-.sm-menu .sm-nav .nav-inner>a:hover {
-  color: #2E3B4E;
-}
+
 
 .sm-menu .sm-close {
   color: white;
@@ -537,13 +418,43 @@ body {
   height: 100%;
 }
 .page1{
-  background-image: url('https://wallpaper.wiki/wp-content/uploads/2017/05/Trust-the-computer-typography-hd-wallpaper-1920x1080.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://data.1freewallpapers.com/download/female-lion-1366x768.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
   text-align: center;
-  font-family: 'open sans';
+  position: relative;
+  margin: 0;
+  height: 100%;
+  border-bottom: 12px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+}
+.snitch{
+  border-right: 1px;
+  border-right-color: white;
+  border-right-style: solid;
+}
+.page2{
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://s-media-cache-ak0.pinimg.com/originals/d5/43/f7/d543f71d60495a7056fbd7e4d0ad2e5f.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  position: relative;
+  margin: 0;
+  height: 100%;
+  border-bottom: 12px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+}
+.page3{
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://wallpaperscraft.com/image/puma_cougar_mountain_lion_78654_4379x2640.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
   position: relative;
   margin: 0;
   height: 100%;
@@ -566,7 +477,7 @@ h1, h2 {
 
 h1 {
   margin-top: 100px;
-  color: #d5dbe5;
+  color: #25282d;
   font-weight: 100;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -606,7 +517,33 @@ pre code {
   border: rgba(0, 0, 0, 0.05) 5px solid;
   max-width: 500px;
 }
+* {
+  box-sizing: border-box;
+}
+.head{
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
 
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: rotate(45deg);
+    background: #ccc;
+    width: 8px;
+    height: 8px;
+    border: 10px solid #fff;
+  }
+  &:before {
+    top: -15px;
+  }
+  &:after {
+    bottom: -15px;
+  }
+}
 .main {
   float: left;
   width: 100%;
@@ -662,7 +599,7 @@ pre code {
   line-height: 100%;
   padding: 1em;
   text-decoration: none;
-  color: #fff;
+
   width: 100px;
   line-height: 140%;
   font-size: 12px;
@@ -688,9 +625,6 @@ pre code {
   width: auto;
 }
 
-.btn:hover, .btn:hover {
-  background: #1494D3;
-}
 
 .btns {
   width: 410px;
@@ -752,10 +686,6 @@ body .sm-button {
   letter-spacing: 5px;
   font-size: 28px;
   z-index: 10;
-}
-
-body .sm-button:hover {
-
 }
 
 .page-container {
